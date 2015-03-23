@@ -1,4 +1,5 @@
 module.exports = function (grunt) {
+
   grunt.initConfig({
     watch: {
       sass: {
@@ -7,14 +8,15 @@ module.exports = function (grunt) {
       }
     },
     sass: {
-        dev: {
-            files: {
-                "public/assets/css/build/app.css" : "public/assets/css/app.scss"
-            }
+      dev: {
+        files: {
+          "public/assets/css/build/app.css" : "public/assets/css/app.scss"
         }
+      }
     },
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+
 };
