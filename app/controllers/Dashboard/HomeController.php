@@ -7,7 +7,7 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
-		return View::make('dashboard.home', ["name" => "Ingrid"]);
+		return View::make('dashboard.index');
 	}
 
 }
