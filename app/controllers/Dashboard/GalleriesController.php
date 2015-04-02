@@ -20,12 +20,16 @@ class GalleriesController extends BaseController {
 
 	public function store()
 	{
-		echo 'YEOOO';
+		$name = \Input::get('name');
+		$gallery = new Gallery();
+		$gallery->name = $name;
+		$gallery->save();
+		return \Redirect::route('dashboard.galleries.index', compact('galleries'));
 	}
 
 	public function edit($id)
 	{
-		$gallery = Gallery::find($id);
+		$gallery = Gallery::findOrFail($id);
 
 		return View::make('dashboard.galleries.edit', compact('gallery'));
 	}
@@ -39,5 +43,10 @@ class GalleriesController extends BaseController {
 		return \Redirect::route('dashboard.galleries.index', compact('galleries'));
 	}
 
-	public function destroy() {}
+	public function destroy($id)
+	{
+		$gallery = Gallery::findOrFail($id)->delete();
+
+		return \Redirect::route('dashboard.galleries.index')->withMessage('Gallery deleted.');
+	}
 }

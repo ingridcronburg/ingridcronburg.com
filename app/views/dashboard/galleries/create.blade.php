@@ -1,6 +1,7 @@
 @extends('dashboard.layout')
 
 @section('content')
+
   <p>This is where you will go to create a new gallery! Someday...</p>
 
   <h1>Create Gallery</h1>
@@ -10,4 +11,5 @@
     {{ Form::text('name') }}
     {{ Form::submit('Create') }}
   {{ Form::close() }}
+
 @stop
