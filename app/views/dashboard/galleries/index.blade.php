@@ -9,4 +9,9 @@
     <li><a href="/dashboard/galleries/{{ $gallery->id }}/edit">{{ $gallery->name }}</a></li>
     @endforeach
   </ul>
+
+  {{ Form::open(['action' => 'Dashboard\GalleriesController@create', 'method' => 'GET']) }}
+  {{ Form::submit('New Gallery') }}
+  {{ Form::close() }}
+
 @stop

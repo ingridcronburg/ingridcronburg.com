@@ -18,7 +18,10 @@ class GalleriesController extends BaseController {
 		return View::make('dashboard.galleries.create');
 	}
 
-	public function store() {}
+	public function store()
+	{
+		echo 'YEOOO';
+	}
 
 	public function edit($id)
 	{
@@ -27,7 +30,14 @@ class GalleriesController extends BaseController {
 		return View::make('dashboard.galleries.edit', compact('gallery'));
 	}
 
-	public function update() {}
+	public function update($id)
+	{
+		$name = \Input::get('name');
+		$gallery = Gallery::findOrFail($id);
+		$gallery->name = $name;
+		$gallery->update();
+		return \Redirect::route('dashboard.galleries.index', compact('galleries'));
+	}
 
 	public function destroy() {}
 }
