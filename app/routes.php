@@ -11,4 +11,5 @@ Route::group([
   Route::get('/', 'HomeController@index');
 
   Route::resource('galleries', 'GalleriesController', ['except' => ['show']]);
+  Route::resource('galleries.images', 'Galleries\ImagesController', ['except' => ['index', 'show']]);
 });

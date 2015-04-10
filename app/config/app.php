@@ -122,6 +122,9 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		// added by us
+		'Aws\Laravel\AwsServiceProvider',
+
 	),
 
 	/*
@@ -188,6 +191,9 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
+
+		// added by us
+		'AWS'               => 'Aws\Laravel\AwsFacade',
 
 	),
 

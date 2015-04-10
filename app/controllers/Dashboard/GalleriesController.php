@@ -1,8 +1,8 @@
 <?php namespace Dashboard;
 
-use BaseController;
 use View;
 use Gallery;
+use BaseController;
 
 class GalleriesController extends BaseController {
 
@@ -20,11 +20,11 @@ class GalleriesController extends BaseController {
 
 	public function store()
 	{
-		$name = \Input::get('name');
 		$gallery = new Gallery();
-		$gallery->name = $name;
+		$gallery->name = \Input::get('name');
 		$gallery->save();
-		return \Redirect::route('dashboard.galleries.index', compact('galleries'));
+
+		return \Redirect::route('dashboard.galleries.index')->withMessage('Gallery created.');
 	}
 
 	public function edit($id)
@@ -36,17 +36,26 @@ class GalleriesController extends BaseController {
 
 	public function update($id)
 	{
-		$name = \Input::get('name');
 		$gallery = Gallery::findOrFail($id);
-		$gallery->name = $name;
+		$gallery->name = \Input::get('name');
 		$gallery->update();
-		return \Redirect::route('dashboard.galleries.index', compact('galleries'));
+
+		return \Redirect::route('dashboard.galleries.index')->withMessage('Gallery updated.');
 	}
 
 	public function destroy($id)
 	{
-		$gallery = Gallery::findOrFail($id)->delete();
+		$gallery = Gallery::findOrFail($id);
+
+		$gallery->images->each(function($image)
+		{
+			$image->deleteS3File();
+			$image->delete();
+		});
+
+		$gallery->delete();
 
 		return \Redirect::route('dashboard.galleries.index')->withMessage('Gallery deleted.');
 	}
+
 }
