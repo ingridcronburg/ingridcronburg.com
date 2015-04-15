@@ -1,16 +1,20 @@
 @extends('dashboard.layout')
 
 @section('content')
-  Hello!
-  <br /><br />
-  Upload a file!
-  <br /><br />
+  <h1>New Image:</h1>
   {{ Form::open(['action' => ['Dashboard\Galleries\ImagesController@store', $gallery->id], 'files' => true, 'method' => 'POST']) }}
-  {{ Form::label('title', 'Title') }}
-  {{ Form::text('title') }}
-  {{ Form::label('location', 'Location') }}
-  {{ Form::text('location') }}
-  {{ Form::file('photo') }}
-  {{ Form::submit('Upload') }}
+  <div class="form-group">
+    {{ Form::label('photo', 'Choose Image to Upload') }}
+    {{ Form::file('photo') }}
+  </div>
+  <div class="form-group">
+    {{ Form::label('title', 'Title') }}
+    {{ Form::text('title') }}
+  </div>
+  <div class="form-group">
+    {{ Form::label('location', 'Location') }}
+    {{ Form::text('location') }}
+  </div>
+  {{ Form::submit('Save', ['class' => 'btn btn-primary']) }}
   {{ Form::close() }}
 @stop

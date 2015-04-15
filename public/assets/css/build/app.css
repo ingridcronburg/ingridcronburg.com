@@ -5640,6 +5640,3 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-body {
-  background: pink;
-  color: green; }

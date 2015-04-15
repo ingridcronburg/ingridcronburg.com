@@ -21,7 +21,9 @@ class GalleriesController extends BaseController {
 	public function store()
 	{
 		$gallery = new Gallery();
-		$gallery->name = \Input::get('name');
+		$gallery->name       = \Input::get('name');
+		$gallery->enabled    = 0;
+		$gallery->sort_order = 0;
 		$gallery->save();
 
 		return \Redirect::route('dashboard.galleries.index')->withMessage('Gallery created.');
@@ -38,6 +40,7 @@ class GalleriesController extends BaseController {
 	{
 		$gallery = Gallery::findOrFail($id);
 		$gallery->name = \Input::get('name');
+		$gallery->enabled = \Input::has('enabled');
 		$gallery->update();
 
 		return \Redirect::route('dashboard.galleries.index')->withMessage('Gallery updated.');

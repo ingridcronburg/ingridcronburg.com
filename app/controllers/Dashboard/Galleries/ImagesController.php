@@ -60,15 +60,15 @@ class ImagesController extends BaseController {
       $source   = \Input::file('photo')->getRealPath();
       $type     = \Input::file('photo')->getMimeType();
       $image->filename = $filename;
-
       $image->saveS3File($filename, $source, $type);
     }
     elseif (\Input::has('delete_photo'))
     {
+      $image->filename = '';
       $image->deleteS3File();
     }
 
-    $image->update();
+    $image->save();
 
     return \Redirect::route('dashboard.galleries.edit', $gallery_id)->withMessage('Image updated.');
   }
