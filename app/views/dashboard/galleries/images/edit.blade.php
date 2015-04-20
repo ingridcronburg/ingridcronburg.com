@@ -1,6 +1,7 @@
 @extends('dashboard.layout')
 
 @section('content')
+@include('dashboard.message')
   <h1>Edit Image: {{ $image->title }}</h1>
   {{ Form::open(['action' => ['Dashboard\Galleries\ImagesController@update', $gallery->id, $image->id], 'files' => true, 'method' => 'PUT']) }}
     @if($image->filename)
@@ -24,9 +25,14 @@
       {{ Form::label('location', 'Location') }}
       {{ Form::text('location', $image->location) }}
     </div>
+    <div class="form-group">
+      {{ Form::label('enabled', 'Enabled') }}
+      {{ Form::checkbox('enabled', null, $image->enabled) }}
+    </div>
     {{ Form::submit('Save', ['class' => 'btn btn-primary']) }}
   {{ Form::close() }}
   {{ Form::open(['action' => ['Dashboard\Galleries\ImagesController@destroy', $gallery->id, $image->id], 'method' => 'DELETE']) }}
     {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
   {{ Form::close() }}
+  <a href="{{ action('Dashboard\GalleriesController@edit', $gallery->id) }}" class="btn btn-default">Back</a>
 @stop

@@ -21,6 +21,8 @@ class ImagesController extends BaseController {
     $image = new Image();
     $image->title    = \Input::get('title');
     $image->location = \Input::get('location');
+    $image->enabled    = 0;
+		$image->sort_order = 0;
 
     if (\Input::hasFile('photo'))
     {
@@ -51,6 +53,7 @@ class ImagesController extends BaseController {
     $image = $gallery->images()->findOrFail($id);
     $image->title    = \Input::get('title');
     $image->location = \Input::get('location');
+    $image->enabled  = \Input::has('enabled');
 
     if (\Input::hasFile('photo'))
     {
@@ -70,7 +73,7 @@ class ImagesController extends BaseController {
 
     $image->save();
 
-    return \Redirect::route('dashboard.galleries.edit', $gallery_id)->withMessage('Image updated.');
+    return \Redirect::route('dashboard.galleries.images.edit', [$gallery_id, $id])->withMessage('Image updated.');
   }
 
   public function destroy($gallery_id, $id)
@@ -83,5 +86,21 @@ class ImagesController extends BaseController {
 
     return \Redirect::route('dashboard.galleries.edit', $gallery_id)->withMessage('Image deleted.');
   }
+
+  public function order($id)
+	{
+		$gallery = Gallery::with('images')->findOrFail($id);
+
+		$image_ids = \Input::get('ids');
+
+		foreach($image_ids as $sort_order => $image_id)
+		{
+			$image = $gallery->images->find($image_id);
+			$image->sort_order = $sort_order;
+			$image->save();
+		}
+
+		return \Response::make(null, 200);
+	}
 
 }
