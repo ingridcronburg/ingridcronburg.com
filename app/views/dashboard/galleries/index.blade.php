@@ -1,7 +1,6 @@
 @extends('dashboard.layout')
 
 @section('content')
-@include('dashboard.message')
   <h1>Galleries</h1>
   <table class="table table-hover">
     <thead>

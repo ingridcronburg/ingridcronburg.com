@@ -10,6 +10,7 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="/dashboard">Ingrid Cronburg</a>
         </div>
+        @if(Auth::check())
         <ul class="nav navbar-nav navbar-left">
           <li><a href="/dashboard/galleries">Galleries</a></li>
           <li><a href="/dashboard/posts">Posts</a></li>
@@ -18,9 +19,11 @@
           <li><p class="navbar-text">Logged in as {{ Auth::user()->name }}</p></li>
           <li><a href="/dashboard/logout">Logout</a></li>
         </ul>
+        @endif
       </div>
     </nav>
     <div class="container">
+      @include('dashboard.message')
       @yield('content')
     </div>
     @yield('scripts')

@@ -5,7 +5,8 @@
   {{ Form::open(['action' => ['Dashboard\GalleriesController@update', $gallery->id], 'method' => 'PUT']) }}
     <div class="form-group">
       {{ Form::label('name', 'Name') }}
-      {{ Form::text('name', $gallery->name) }}
+      {{ Form::text('name', Input::old('name', $gallery->name)) }}
+      {{ $errors->first('name', '<p class="text-danger">:message</p>') }}
     </div>
     <div class="form-group">
       {{ Form::label('enabled', 'Enabled') }}

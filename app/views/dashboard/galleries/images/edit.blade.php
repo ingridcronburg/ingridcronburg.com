@@ -1,7 +1,6 @@
 @extends('dashboard.layout')
 
 @section('content')
-@include('dashboard.message')
   <h1>Edit Image: {{ $image->title }}</h1>
   {{ Form::open(['action' => ['Dashboard\Galleries\ImagesController@update', $gallery->id, $image->id], 'files' => true, 'method' => 'PUT']) }}
     @if($image->filename)
@@ -15,15 +14,18 @@
     <div class="form-group">
       {{ Form::label('photo', 'Choose Image to Upload') }}
       {{ Form::file('photo') }}
+      {{ $errors->first('photo', '<p class="text-danger">:message</p>') }}
     </div>
     @endif
     <div class="form-group">
       {{ Form::label('title', 'Title') }}
       {{ Form::text('title', $image->title) }}
+      {{ $errors->first('title', '<p class="text-danger">:message</p>') }}
     </div>
     <div class="form-group">
       {{ Form::label('location', 'Location') }}
       {{ Form::text('location', $image->location) }}
+      {{ $errors->first('location', '<p class="text-danger">:message</p>') }}
     </div>
     <div class="form-group">
       {{ Form::label('enabled', 'Enabled') }}
