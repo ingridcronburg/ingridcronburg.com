@@ -31,7 +31,7 @@
     @foreach($gallery->images->sortBy('sort_order') as $image)
     <tr data-href="/dashboard/galleries/{{ $gallery->id }}/images/{{ $image->id }}/edit" data-id="{{ $image->id }}">
       <td>
-        <img src="http://ingridcronburg.com.s3.amazonaws.com/{{ $image->filename }}" />
+        <img src="{{ $image->src }}" />
       </td>
       <td>{{ $image->title }}</td>
       <td>{{ $image->location }}</td>

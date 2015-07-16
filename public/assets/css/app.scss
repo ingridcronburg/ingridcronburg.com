@@ -1,5 +1,10 @@
 @import "../js/vendor/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 
+@import 'dashboard/login';
+@import 'header';
+@import 'pages/home';
+@import 'pages/portfolio';
+
 tbody tr:hover {
   cursor: pointer;
 }

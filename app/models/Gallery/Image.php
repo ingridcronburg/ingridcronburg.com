@@ -5,6 +5,12 @@ use AWS;
 
 class Image extends Eloquent {
 
+  // $image->src
+  public function getSrcAttribute()
+  {
+    return "http://ingridcronburg.com.s3.amazonaws.com/{$this->filename}";
+  }
+
   public function saveS3File($filename, $source, $type)
   {
     // safeguard to make sure we

@@ -5,7 +5,7 @@
   {{ Form::open(['action' => ['Dashboard\Galleries\ImagesController@update', $gallery->id, $image->id], 'files' => true, 'method' => 'PUT']) }}
     @if($image->filename)
     <div class="form-group">
-      <img src="http://ingridcronburg.com.s3.amazonaws.com/{{ $image->filename }}" />
+      <img src="{{ $image->src }}" />
       <br/>
       {{ Form::label('delete_photo', 'Delete Photo') }}
       {{ Form::checkbox('delete_photo') }}
