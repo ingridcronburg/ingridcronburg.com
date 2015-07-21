@@ -1,0 +1,14 @@
+.carousel-control {
+  &.right, &.left {
+    background-image: none;
+    width: 50%;
+  }
+}
+
+.carousel-inner {
+  text-align: center;
+
+  .item img {
+    display: inline;
+  }
+}

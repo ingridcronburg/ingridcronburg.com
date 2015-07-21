@@ -1,22 +1,10 @@
 @extends('layout')
 
 @section('content')
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol> -->
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" data-interval="false" role="listbox">
-  @foreach($gallery->images->sortBy('sort_order') as $key => $image)
-    @if($key == 0)
-      <div class="item active">
-    @else
-      <div class="item">
-    @endif
+<div class="carousel slide" data-interval="false">
+  <div class="carousel-inner" role="listbox">
+  @foreach($gallery->images->sortByDesc('sort_order') as $key => $image)
+    @if($key == 0)<div class="item active">@else<div class="item">@endif
       <img src="{{ $image->src }}" alt="{{ $image->title }}" />
       <div class="carousel-caption">
         {{ $image->title }}
@@ -25,15 +13,19 @@
     </div>
   @endforeach
   </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  <a class="left carousel-control" href="#carousel-previous" role="button" data-slide="prev">
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <a class="right carousel-control" href="#carousel-next" role="button" data-slide="next">
     <span class="sr-only">Next</span>
   </a>
 </div>
+@endsection
+
+@section('scripts')
+@parent
+<script>
+$('.right.carousel-control').click(function() { $('.carousel').carousel('next'); });
+$('.left.carousel-control').click(function() { $('.carousel').carousel('prev'); });
+</script>
 @endsection
