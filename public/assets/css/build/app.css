@@ -5683,14 +5683,25 @@ img {
     text-transform: uppercase;
     font-weight: normal; }
 
-.carousel-control.right, .carousel-control.left {
+.carousel .carousel-inner {
+  text-align: center; }
+  .carousel .carousel-inner .item img {
+    display: inline; }
+    @media (min-width: 1200px) {
+      .carousel .carousel-inner .item img {
+        max-height: 1170px; } }
+    @media (min-width: 992px) {
+      .carousel .carousel-inner .item img {
+        max-height: 970px; } }
+    @media (min-width: 768px) {
+      .carousel .carousel-inner .item img {
+        max-height: 750px; } }
+.carousel .caption {
+  margin-top: 20px;
+  text-transform: uppercase; }
+.carousel .carousel-control.right, .carousel .carousel-control.left {
   background-image: none;
   width: 50%; }
-
-.carousel-inner {
-  text-align: center; }
-  .carousel-inner .item img {
-    display: inline; }
 
 tbody tr:hover {
   cursor: pointer; }

@@ -1,13 +1,13 @@
 .header {
   margin-bottom: 25px;
 
-.menu {
-  @media (min-width: $screen-sm-min) {
-    &.collapse {
-      display: block;
+  .menu {
+    @media (min-width: $screen-sm-min) {
+      &.collapse {
+        display: block;
+      }
     }
   }
-}
 
   a {
     color: black;

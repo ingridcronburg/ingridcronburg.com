@@ -6,8 +6,9 @@
   @foreach($gallery->images->sortByDesc('sort_order') as $key => $image)
     @if($key == 0)<div class="item active">@else<div class="item">@endif
       <img src="{{ $image->src }}" alt="{{ $image->title }}" />
-      <div class="carousel-caption">
+      <div class="caption">
         {{ $image->title }}
+        <br/>
         {{ $image->location }}
       </div>
     </div>
@@ -25,7 +26,7 @@
 @section('scripts')
 @parent
 <script>
-$('.right.carousel-control').click(function() { $('.carousel').carousel('next'); });
-$('.left.carousel-control').click(function() { $('.carousel').carousel('prev'); });
+  $('.right.carousel-control').click(function() { $('.carousel').carousel('next'); });
+  $('.left.carousel-control').click(function() { $('.carousel').carousel('prev'); });
 </script>
 @endsection

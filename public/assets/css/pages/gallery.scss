@@ -1,14 +1,29 @@
-.carousel-control {
-  &.right, &.left {
-    background-image: none;
-    width: 50%;
+.carousel {
+  .carousel-inner {
+    text-align: center;
+
+    .item img {
+      @media (min-width: $screen-lg-min) {
+        max-height: $container-lg;
+      }
+      @media (min-width: $screen-md-min) {
+        max-height: $container-md;
+      }
+      @media (min-width: $screen-sm-min) {
+        max-height: $container-sm;
+      }
+    }
   }
-}
 
-.carousel-inner {
-  text-align: center;
+  .caption {
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
 
-  .item img {
-    display: inline;
+  .carousel-control {
+    &.right, &.left {
+      background-image: none;
+      width: 50%;
+    }
   }
 }
