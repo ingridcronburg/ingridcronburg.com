@@ -11,7 +11,7 @@
       @yield('content')
       @section('scripts')
       <script src="/assets/js/vendor/jquery/dist/jquery.min.js"></script>
-      <script src="/assets/js/vendor/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>
+      <script src="/assets/js/vendor/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
       @show
     </div>
   </body>

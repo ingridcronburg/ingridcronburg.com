@@ -5684,24 +5684,31 @@ img {
     font-weight: normal; }
 
 .carousel .carousel-inner {
+  display: inline;
   text-align: center; }
-  .carousel .carousel-inner .item img {
-    display: inline; }
-    @media (min-width: 1200px) {
-      .carousel .carousel-inner .item img {
-        max-height: 1170px; } }
-    @media (min-width: 992px) {
-      .carousel .carousel-inner .item img {
-        max-height: 970px; } }
-    @media (min-width: 768px) {
-      .carousel .carousel-inner .item img {
-        max-height: 750px; } }
+  @media (min-width: 1200px) {
+    .carousel .carousel-inner .item img {
+      max-height: 1170px; } }
+  @media (min-width: 992px) {
+    .carousel .carousel-inner .item img {
+      max-height: 970px; } }
+  @media (min-width: 768px) {
+    .carousel .carousel-inner .item img {
+      max-height: 750px; } }
 .carousel .caption {
-  margin-top: 20px;
+  margin-top: 25px;
   text-transform: uppercase; }
 .carousel .carousel-control.right, .carousel .carousel-control.left {
   background-image: none;
   width: 50%; }
+
+.thumbnails {
+  margin-top: 50px; }
+  .thumbnails.fade-out {
+    opacity: 0.1;
+    transition: 0.1s opacity; }
+  .thumbnails:hover {
+    opacity: 1; }
 
 tbody tr:hover {
   cursor: pointer; }
