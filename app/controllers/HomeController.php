@@ -6,20 +6,27 @@ class HomeController extends BaseController {
 	{
 		$image = \Gallery\Image::find(19);
 
-		return View::make('home', compact('image'));
+		return \View::make('home', compact('image'));
 	}
 
 	public function portfolio()
 	{
 		$galleries = \Gallery::where('enabled', 1)->orderBy('sort_order')->get();
 
-		return View::make('portfolio', compact('galleries'));
+		return \View::make('portfolio', compact('galleries'));
 	}
 
 	public function gallery($id)
 	{
 		$gallery = \Gallery::findOrFail($id);
 
-		return View::make('gallery', compact('gallery'));
+		return \View::make('gallery', compact('gallery'));
+	}
+
+	public function blog()
+	{
+		$posts = \Post::where('enabled', 1)->orderByDesc('publish_at')->get();
+
+		return \View::make('blog', compact('posts'));
 	}
 }

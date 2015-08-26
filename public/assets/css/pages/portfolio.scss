@@ -5,6 +5,10 @@
     > .cover {
       display: block;
     }
+
+    img {
+      opacity: 0.3;
+    }
   }
 
   img {
@@ -18,15 +22,15 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(220, 220, 220, 0.8);
-  }
 
-  p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    font-weight: normal;
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      color: black;
+      font-size: 18px;
+    }
   }
 }

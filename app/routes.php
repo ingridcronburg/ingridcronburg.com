@@ -1,8 +1,9 @@
 <?php
 
-Route::get('/',         'HomeController@home');
-Route::get('portfolio', 'HomeController@portfolio');
-Route::get('galleries/{id}',   'HomeController@gallery');
+Route::get('/',              'HomeController@home');
+Route::get('portfolio',      'HomeController@portfolio');
+Route::get('galleries/{id}', 'HomeController@gallery');
+Route::get('blog',           'HomeController@blog');
 
 Route::group([
   'prefix'    => 'dashboard',

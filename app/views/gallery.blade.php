@@ -3,7 +3,7 @@
 @section('content')
 <div class="carousel slide" data-interval="false">
   <div class="carousel-inner" role="listbox">
-  @foreach($gallery->images->sortByDesc('sort_order')->values() as $key => $image)
+  @foreach($gallery->images->sortBy('sort_order')->values() as $key => $image)
     @if($key == 0)<div class="item active">@else<div class="item">@endif
       <img src="{{ $image->src }}" alt="{{ $image->title }}" />
       <div class="caption">
@@ -23,23 +23,23 @@
 </div>
 <div class="thumbnails">
   <div class="row">
-    @foreach($gallery->images->sortByDesc('sort_order')->values() as $key => $image)
-      <div class="col-xs-2">
-        <img src="{{ $image->src }}" alt="{{ $image->title }}" data-index="{{ $key }}" />
-      </div>
-    @endforeach
-</div>
+  @foreach($gallery->images->sortBy('sort_order')->values() as $key => $image)
+    <div class="col-xs-2">
+      <img src="{{ $image->src }}" alt="{{ $image->title }}" data-index="{{ $key }}" />
+    </div>
+  @endforeach
+  </div>
 </div>
 @endsection
 
 @section('scripts')
 @parent
 <script>
-  setTimeout(function(){
-    $('.thumbnails').addClass('fade-out');
-  }, 1000);
+  $('.thumbnails img:first').addClass('selected');
 
   $('.thumbnails img').click(function() {
+    $('.thumbnails img.selected').removeClass('selected');
+    $(this).addClass('selected');
     $('.carousel').carousel(parseInt($(this).attr('data-index')));
   });
 

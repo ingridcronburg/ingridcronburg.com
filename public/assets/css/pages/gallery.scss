@@ -1,9 +1,11 @@
 .carousel {
   .carousel-inner {
-    display: inline;
     text-align: center;
 
     .item img {
+      display: block;
+      margin: auto;
+
       @media (min-width: $screen-lg-min) {
         max-height: $container-lg;
       }
@@ -32,12 +34,25 @@
 .thumbnails {
   margin-top: 50px;
 
-  &.fade-out {
-    opacity: 0.1;
-    transition: 0.5s opacity;
-  }
+  //&.fade-out {
+    //opacity: 0.1;
+    //transition: 1s opacity;
+  //}
 
-  &:hover {
-    opacity: 1;
+  img {
+    opacity: 0.1;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &.selected {
+      opacity: 0.5;
+      transition: 1s opacity;
+    }
   }
 }
+
+  //&:hover {
+    //opacity: 1;
+  //}
