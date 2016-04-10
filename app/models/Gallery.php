@@ -18,7 +18,7 @@ class Gallery extends Eloquent {
 
   public function images()
   {
-    return $this->hasMany('Gallery\Image');
+    return $this->morphMany('Image', 'imageable');
   }
 
 }

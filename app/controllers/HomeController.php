@@ -2,31 +2,16 @@
 
 class HomeController extends BaseController {
 
-	public function home()
+	public function index()
 	{
-		$image = \Gallery\Image::find(19);
+		$image = \Image::find(19);
 
 		return \View::make('home', compact('image'));
 	}
 
-	public function portfolio()
+	public function contact()
 	{
-		$galleries = \Gallery::where('enabled', 1)->orderBy('sort_order')->get();
-
-		return \View::make('portfolio', compact('galleries'));
+		return \View::make('contact');
 	}
 
-	public function gallery($id)
-	{
-		$gallery = \Gallery::findOrFail($id);
-
-		return \View::make('gallery', compact('gallery'));
-	}
-
-	public function blog()
-	{
-		$posts = \Post::where('enabled', 1)->orderByDesc('publish_at')->get();
-
-		return \View::make('blog', compact('posts'));
-	}
 }

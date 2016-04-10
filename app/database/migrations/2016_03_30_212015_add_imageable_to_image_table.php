@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGalleriesTable extends Migration {
+class AddImageableToImageTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,10 @@ class CreateGalleriesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('galleries', function($table)
+		Schema::table('images', function($table)
 		{
-			$table->increments('id');
-			$table->string('name');
-			$table->nullableTimestamps();
+			$table->integer('imageable_id');
+			$table->string('imageable_type');
 		});
 	}
 
@@ -27,7 +26,10 @@ class CreateGalleriesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('galleries');
+		Schema::table('images', function($table)
+		{
+			$table->dropColumn(['imageable_id', 'imageable_type']);
+		});
 	}
 
 }

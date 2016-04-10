@@ -7,10 +7,9 @@
       <div class="col-md-8 col-sm-7">
         <div class="menu collapse">
           <ul>
-            <li class="col-sm-3"><a href="/portfolio">Portfolio</a></li>
-            <li class="col-sm-3"><a href="#">Blog</a></li>
-            <li class="col-sm-3"><a href="#">Map</a></li>
-            <li class="col-sm-3"><a href="#">Contact</a></li>
+            <li class="col-sm-3"><a href="/galleries">Portfolio</a></li>
+            <li class="col-sm-3"><a href="/posts">Blog</a></li>
+            <li class="col-sm-3"><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <button class="visible-xs" data-toggle="collapse" data-target=".menu">Menu</button>

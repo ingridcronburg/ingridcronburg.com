@@ -15,11 +15,10 @@ class CreateImagesTable extends Migration {
 		Schema::create('images', function($table)
 		{
 			$table->increments('id');
-			$table->integer('gallery_id')->nullable();
 			$table->string('filename');
 			$table->string('title');
 			$table->string('location');
-			$table->timestamps();
+			$table->nullableTimestamps();
 		});
 	}
 

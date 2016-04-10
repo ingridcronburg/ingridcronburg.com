@@ -1,7 +1,4 @@
-<?php namespace Gallery;
-
-use Eloquent;
-use AWS;
+<?php
 
 class Image extends Eloquent {
 
@@ -43,6 +40,11 @@ class Image extends Eloquent {
   public function gallery()
   {
     return $this->belongsTo('Gallery');
+  }
+
+  public function imageable()
+  {
+    return $this->morphTo();
   }
 
 }

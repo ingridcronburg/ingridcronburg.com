@@ -21,7 +21,7 @@ class ImagesController extends \BaseController {
     {
       $gallery = \Gallery::findOrFail($gallery_id);
 
-      $image = new \Gallery\Image();
+      $image = new \Image();
       $image->title    = \Input::get('title');
       $image->location = \Input::get('location');
       $image->enabled    = 0;
