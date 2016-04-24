@@ -4,6 +4,11 @@ body { font-family: 'OstrichSansRoundedMedium', Helvetica; color: black; font-si
 a { color: black; text-decoration: none; opacity: 0.7; font-size: 20px; letter-spacing: 1px; }
 a:hover { opacity: 1.0; }
 
+.background {
+  background: url("../img/uppsala.jpg") no-repeat;
+  background-size: cover;
+}
+
 .clear { clear: both; }
 .container { width: 1000px; margin: auto; }
 .container .index { padding-top: 20px}
