@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ingrid Cronburg</title>
+		<link rel="stylesheet" href="assets/css/reset.css" />
+		<link rel="stylesheet" href="assets/css/font.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/js/vendor/isotope/isotope.css" />
+		<link rel="stylesheet" href="assets/js/vendor/shadowbox/shadowbox.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="title">
+          <a class="index" href="#!/">Ingrid Cronburg</a>
+        </div>
+				<ul class="menu">
+					<li><a class="gallery" href="#!/gallery/portraits">Portraits</a></li>
+					<li><a class="gallery" href="#!/gallery/scenery">Scenery</a></li>
+					<li><a class="gallery" href="#!/gallery/objects">Objects</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="main">
+				<div class="index">
+          <img src="/assets/img/ingrid.jpg" alt="Ingrid" />
+        </div>
+				<div class="gallery">
+					<ul class="images"></ul>
+					<div class="title"></div>
+					<ul class="controls">
+						<li class="prev">&lt;</li>
+						<li class="position"></li>
+						<li class="next">&gt;</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="assets/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/isotope/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/shadowbox/shadowbox.js"></script>
+    <script type="text/javascript" src="assets/js/router.js"></script>
+		<script type="text/javascript" src="assets/js/gallery.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+		<script type="text/javascript">
+		  Shadowbox.init({
+		    'overlayOpacity': 1,
+		    'overlayColor': "white",
+		    'onFinish': function() { $('#sb-body-inner img').one('click',Shadowbox.close); }
+		  });
+		</script>
+	</body>
+</html>

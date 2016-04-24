@@ -1,0 +1,24 @@
+html { background: white; }
+body { font-family: 'OstrichSansRoundedMedium', Helvetica; color: black; font-size: 20px; letter-spacing: 1px; }
+
+a { color: black; text-decoration: none; opacity: 0.7; font-size: 20px; letter-spacing: 1px; }
+a:hover { opacity: 1.0; }
+
+.clear { clear: both; }
+.container { width: 1000px; margin: auto; }
+.container .index { padding-top: 20px}
+
+.header { padding: 10px 0 0; overflow: hidden; }
+.header .title { float: left; margin-top: -4px; }
+.header .title a { font-size: 30px; text-transform: uppercase; }
+.header .menu { text-transform: uppercase; float: right; }
+.header .menu a { font-size: 30px; letter-spacing: 1px; }
+.header .menu li { display: inline-block; *display: inline; zoom: 1; margin-left: 20px; }
+
+.main .index { text-align: center; }
+.main .index img { margin: auto; }
+
+.main .gallery .images, .main .gallery .title, .main .gallery .controls { text-align: center; margin-bottom: 10px; cursor: pointer; }
+.main .gallery .controls li { display: inline-block; *display: inline; margin-right: 10px; }
+.main .gallery .controls li:last-child { margin-right: 0; }
+.main .gallery .controls .prev, .main .gallery .controls .next { cursor: pointer; font-family: Helvetica; }

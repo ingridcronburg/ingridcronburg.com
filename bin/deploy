@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ssh root@ingridcronburg.com "cd /var/www && git pull"
