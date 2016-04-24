@@ -1,0 +1,8 @@
+.container {
+  width: 100%;
+  overflow: hidden;
+
+  @include respond-to(medium-screens) {
+    width: 1024px;
+  }
+}

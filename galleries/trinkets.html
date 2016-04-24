@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ingrid Cronburg | Gallery | Trinkets</title>
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css" />
+    <link href="/js/fluidbox/css/fluidbox.css" rel="stylesheet" />
+    <link href="/css/app.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="gallery">
+    <div class="container">
+      <div class="navigation">
+        <h1><a href="/">Ingrid Cronburg</a></h1>
+        <ul>
+          <li>
+            <a href="javascript:void(0);" class="drop-down open">Galleries</a>
+            <ul>
+              <li><a href="/galleries/family.html">Family</a></li>
+              <li><a href="/galleries/encounters.html">Encounters</a></li>
+              <li><a href="/galleries/here.html">Here</a></li>
+              <li><a href="/galleries/trinkets.html" class="selected">Trinkets</a></li>
+            </ul>
+          </li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="image-grid">
+          <a href="/images/trinkets/20120226004139.jpg" data-fluidbox>
+            <img class="landscape" src="/images/trinkets/20120226004139.jpg" />
+          </a>
+          <a href="/images/trinkets/20120325150747.jpg" data-fluidbox>
+            <img class="landscape"  src="/images/trinkets/20120325150747.jpg" />
+          </a>
+          <a href="/images/trinkets/20120415104010.jpg" data-fluidbox>
+            <img class="portrait"  src="/images/trinkets/20120415104010.jpg" />
+          </a>
+          <a href="/images/trinkets/20120909164710.jpg" data-fluidbox>
+            <img class="portrait" src="/images/trinkets/20120909164710.jpg" />
+          </a>
+          <a href="/images/trinkets/20121006121030.jpg" data-fluidbox>
+            <img class="landscape" src="/images/trinkets/20121006121030.jpg" />
+          </a>
+          <a href="/images/trinkets/20121204205359.jpg" data-fluidbox>
+            <img class="landscape" src="/images/trinkets/20121204205359.jpg" />
+          </a>
+          <a href="/images/trinkets/20131102101058.jpg" data-fluidbox>
+            <img class="landscape" src="/images/trinkets/20131102101058.jpg" />
+          </a>
+          <a href="/images/trinkets/20140607133209.jpg" data-fluidbox>
+            <img class="landscape" src="/images/trinkets/20140607133209.jpg" />
+          </a>
+          <a href="/images/trinkets/20140628140935.jpg" data-fluidbox>
+            <img class="portrait" src="/images/trinkets/20140628140935.jpg" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery/dist/jquery.min.js"></script>
+<script src="/js/fluidbox/jquery.fluidbox.min.js"></script>
+<script>
+  $(function()
+  {
+    $('[data-fluidbox]').fluidbox({
+      overlayColor: 'rgba(255,255,255,1)'
+    });
+  })
+</script>
+<script src="/js/app.js"></script>
+</body>
+</html>

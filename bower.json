@@ -1,10 +1,10 @@
 {
   "name": "ingridcronburg.com",
-  "version": "0.0.0",
-  "homepage": "https://github.com/ingridcronburg/ingridcronburg.com",
+  "version": "1.0.0",
   "authors": [
     "Ingrid Cronburg <ingrid257@gmail.com>"
   ],
+  "description": "My Website",
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -15,8 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.3",
-    "bootstrap-sass-official": "~3.3.4",
-    "jquery.ui": "~1.11.4"
+    "jquery": "~2.1.1",
+    "fluidbox": "~1.3.2"
   }
 }

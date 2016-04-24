@@ -1,0 +1,9 @@
+.content {
+  float: left;
+  padding: $padding 0 0 0;
+  width: 80%;
+
+  @include respond-to(medium-screens) {
+    width: 824px;
+  }
+}

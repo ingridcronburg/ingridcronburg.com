@@ -1,0 +1,18 @@
+.image-grid {
+  font-size: 0px;
+  text-align: center;
+
+  img {
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 0 $padding $padding 0;
+  }
+
+  img.portrait {
+    width: 25%;
+  }
+
+  img.landscape {
+    width: 50%;
+  }
+}

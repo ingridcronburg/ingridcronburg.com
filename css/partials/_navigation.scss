@@ -1,0 +1,44 @@
+.navigation {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 0 0 $padding;
+  width: 20%;
+
+  @include respond-to(medium-screens) {
+    width: 200px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  h1 a {
+    color: #E60000;
+    text-transform: lowercase;
+  }
+
+  h1, li {
+    padding: 10px 0px;
+  }
+
+  .drop-down {
+    & + ul {
+      display: none;
+
+      li {
+        margin-left: 20px;
+      }
+    }
+
+    &.open {
+      & + ul {
+        display: block;
+      }
+    }
+  }
+
+  .selected {
+    font-weight: bold;
+  }
+
+}

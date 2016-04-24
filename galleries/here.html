@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ingrid Cronburg | Gallery | Here</title>
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css" />
+    <link href="/js/fluidbox/css/fluidbox.css" rel="stylesheet" />
+    <link href="/css/app.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="gallery">
+    <div class="container">
+      <div class="navigation">
+        <h1><a href="/">Ingrid Cronburg</a></h1>
+        <ul>
+          <li>
+            <a href="javascript:void(0);" class="drop-down open">Galleries</a>
+            <ul>
+              <li><a href="/galleries/family.html">Family</a></li>
+              <li><a href="/galleries/encounters.html">Encounters</a></li>
+              <li><a href="/galleries/here.html" class="selected">Here</a></li>
+              <li><a href="/galleries/trinkets.html">Trinkets</a></li>
+            </ul>
+          </li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="image-grid">
+          <a href="/images/here/20120324145211.jpg" data-fluidbox>
+            <img class="landscape" src="/images/here/20120324145211.jpg" />
+          </a>
+          <a href="/images/here/20120325163356.jpg" data-fluidbox>
+            <img class="landscape"  src="/images/here/20120325163356.jpg" />
+          </a>
+          <a href="/images/here/20120704183541.jpg" data-fluidbox>
+            <img class="portrait"  src="/images/here/20120704183541.jpg" />
+          </a>
+          <a href="/images/here/20120705201314.jpg" data-fluidbox>
+            <img class="landscape" src="/images/here/20120705201314.jpg" />
+          </a>
+          <a href="/images/here/20120707200409.jpg" data-fluidbox>
+            <img class="landscape" src="/images/here/20120707200409.jpg" />
+          </a>
+          <a href="/images/here/20120726185251.jpg" data-fluidbox>
+            <img class="landscape" src="/images/here/20120726185251.jpg" />
+          </a>
+          <a href="/images/here/20120826121535.jpg" data-fluidbox>
+            <img class="landscape" src="/images/here/20120826121535.jpg" />
+          </a>
+          <a href="/images/here/20130420171740.jpg" data-fluidbox>
+            <img class="landscape" src="/images/here/20130420171740.jpg" />
+          </a>
+          <a href="/images/here/20140607134325.jpg" data-fluidbox>
+            <img class="landscape" src="/images/here/20140607134325.jpg" />
+          </a>
+          <a href="/images/here/20140630123122.jpg" data-fluidbox>
+            <img class="landscape" src="/images/here/20140630123122.jpg" />
+          </a>
+          <a href="/images/here/20140630164209.jpg" data-fluidbox>
+            <img class="landscape" src="/images/here/20140630164209.jpg" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery/dist/jquery.min.js"></script>
+<script src="/js/fluidbox/jquery.fluidbox.min.js"></script>
+<script>
+  $(function()
+  {
+    $('[data-fluidbox]').fluidbox({
+      overlayColor: 'rgba(255,255,255,1)'
+    });
+  })
+</script>
+<script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ingrid Cronburg | Gallery | Encounters</title>
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css" />
+    <link href="/js/fluidbox/css/fluidbox.css" rel="stylesheet" />
+    <link href="/css/app.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="gallery">
+    <div class="container">
+      <div class="navigation">
+        <h1><a href="/">Ingrid Cronburg</a></h1>
+        <ul>
+          <li>
+            <a href="javascript:void(0);" class="drop-down open">Galleries</a>
+            <ul>
+              <li><a href="/galleries/family.html">Family</a></li>
+              <li><a href="/galleries/encounters.html" class="selected">Encounters</a></li>
+              <li><a href="/galleries/here.html">Here</a></li>
+              <li><a href="/galleries/trinkets.html">Trinkets</a></li>
+            </ul>
+          </li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="image-grid">
+          <a href="/images/encounters/20110227170922.jpg" data-fluidbox>
+            <img class="landscape" src="/images/encounters/20110227170922.jpg" />
+          </a>
+          <a href="/images/encounters/20110303203518.jpg" data-fluidbox>
+            <img class="portrait"  src="/images/encounters/20110303203518.jpg" />
+          </a>
+          <a href="/images/encounters/20121202175339.jpg" data-fluidbox>
+            <img class="portrait"  src="/images/encounters/20121202175339.jpg" />
+          </a>
+          <a href="/images/encounters/20130407150640.jpg" data-fluidbox>
+            <img class="landscape" src="/images/encounters/20130407150640.jpg" />
+          </a>
+          <a href="/images/encounters/20131116172823.jpg" data-fluidbox>
+            <img class="landscape" src="/images/encounters/20131116172823.jpg" />
+          </a>
+          <a href="/images/encounters/20131201134239.jpg" data-fluidbox>
+            <img class="landscape" src="/images/encounters/20131201134239.jpg" />
+          </a>
+          <a href="/images/encounters/20131207151854.jpg" data-fluidbox>
+            <img class="landscape" src="/images/encounters/20131207151854.jpg" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery/dist/jquery.min.js"></script>
+<script src="/js/fluidbox/jquery.fluidbox.min.js"></script>
+<script>
+  $(function()
+  {
+    $('[data-fluidbox]').fluidbox({
+      overlayColor: 'rgba(255,255,255,1)'
+    });
+  })
+</script>
+<script src="/js/app.js"></script>
+</body>
+</html>
