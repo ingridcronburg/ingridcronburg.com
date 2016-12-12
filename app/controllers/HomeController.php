@@ -4,14 +4,17 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
-		$image = \Image::find(19);
-
-		return \View::make('home', compact('image'));
+		return \View::make('home');
 	}
 
-	public function contact()
+	public function web()
 	{
-		return \View::make('contact');
+		return \View::make('web');
+	}
+
+	public function about()
+	{
+		return \View::make('about');
 	}
 
 }

@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('content')
-<img src="{{ $image->src }}">
-<p>Welcome to my digital portfolio!</p>
+<div id="home">
+  <div class="row text-center">
+    <img src="/assets/img/20130705221618.jpg"></img>
+  </div>
+</div>
 @endsection

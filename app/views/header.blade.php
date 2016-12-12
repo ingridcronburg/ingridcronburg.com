@@ -1,19 +1,20 @@
-<div class="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-5">
-        <h1><a href="/">Ingrid Cronburg</a></h1>
-      </div>
-      <div class="col-md-8 col-sm-7">
-        <div class="menu collapse">
-          <ul>
-            <li class="col-sm-3"><a href="/galleries">Portfolio</a></li>
-            <li class="col-sm-3"><a href="/posts">Blog</a></li>
-            <li class="col-sm-3"><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-        <button class="visible-xs" data-toggle="collapse" data-target=".menu">Menu</button>
-      </div>
+<div id="header">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h1><a href="/">Ingrid Cronburg</a></h1>
     </div>
-  </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/web">Web</a></li>
+        <li><a href="/galleries">Photos</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+</nav>
 </div>

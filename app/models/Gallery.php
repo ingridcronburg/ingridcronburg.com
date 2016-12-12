@@ -9,7 +9,7 @@ class Gallery extends Eloquent {
 
   public function getCoverImage()
   {
-    $image = $this->images->first();
+    $image = $this->images->sortBy('sort_order')->first();
 
     return $image ? $image->src : '';
   }

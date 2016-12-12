@@ -1,0 +1,16 @@
+.gallery {
+  position: relative;
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  img {
+    width: 50%;
+
+    &:hover {
+      opacity: 0.5;
+      transition: 0.2s opacity;
+    }
+  }
+}

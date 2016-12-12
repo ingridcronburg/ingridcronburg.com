@@ -12,9 +12,9 @@ class ImagesController extends \BaseController {
   public function store($gallery_id)
   {
     $validator = \Validator::make(\Input::all(), [
-      'title' => ['required'],
-      'location' => ['required'],
-      'photo' => ['required', 'image']
+      'title'    => [],
+      'location' => [],
+      'photo'    => ['image']
     ]);
 
     if($validator->passes())
@@ -25,7 +25,7 @@ class ImagesController extends \BaseController {
       $image->title    = \Input::get('title');
       $image->location = \Input::get('location');
       $image->enabled    = 0;
-  		$image->sort_order = 0;
+      $image->sort_order = 0;
 
       if(\Input::hasFile('photo'))
       {
@@ -60,9 +60,9 @@ class ImagesController extends \BaseController {
   public function update($gallery_id, $id)
   {
     $validator = \Validator::make(\Input::all(), [
-      'title' => ['required'],
-      'location' => ['required'],
-      'photo' => ['required', 'image']
+      'title'    => [],
+      'location' => [],
+      'photo'    => ['image']
     ]);
 
     if($validator->passes())
@@ -71,7 +71,7 @@ class ImagesController extends \BaseController {
       $image = $gallery->images()->findOrFail($id);
       $image->title    = \Input::get('title');
       $image->location = \Input::get('location');
-      $image->enabled  = \Input::has('enabled');
+      $image->enabled  = (int)\Input::has('enabled');
 
       if(\Input::hasFile('photo'))
       {

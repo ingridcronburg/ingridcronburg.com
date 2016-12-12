@@ -2,6 +2,26 @@
 
 @section('content')
   <h1>Edit Gallery: {{ $gallery->name }}</h1>
+
+  <h2>Images</h2>
+  <table class="table table-hover" id="images">
+    <tbody class="sortable">
+    @foreach($gallery->images->sortBy('sort_order') as $image)
+    <tr data-href="/dashboard/galleries/{{ $gallery->id }}/images/{{ $image->id }}/edit" data-id="{{ $image->id }}">
+      <td>
+        <img src="{{ $image->src }}" />
+        <div class="cover">
+          <p>{{ $image->title }}</p>
+          <p>{{ $image->location }}</p>
+        </div>
+      </td>
+
+    </tr>
+    @endforeach
+    </tbody>
+  </table>
+  <br />
+  <a href="/dashboard/galleries/{{ $gallery->id }}/images/create" class="btn btn-primary">New Image</a>
   {{ Form::open(['action' => ['Dashboard\GalleriesController@update', $gallery->id], 'method' => 'PUT']) }}
     <div class="form-group">
       {{ Form::label('name', 'Name') }}
@@ -10,7 +30,7 @@
     </div>
     <div class="form-group">
       {{ Form::label('enabled', 'Enabled') }}
-      {{ Form::checkbox('enabled') }}
+      {{ Form::checkbox('enabled', Input::old('enabled', $gallery->enabled)) }}
     </div>
     {{ Form::submit('Save', ['class' => 'btn btn-primary']) }}
   {{ Form::close() }}
@@ -18,29 +38,6 @@
     {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
   {{ Form::close() }}
   <a href="{{ action('Dashboard\GalleriesController@index') }}" class="btn btn-default">Back</a>
-  <h2>Images</h2>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>Title</th>
-        <th>Location</th>
-      </tr>
-    </thead>
-    <tbody class="sortable">
-    @foreach($gallery->images->sortBy('sort_order') as $image)
-    <tr data-href="/dashboard/galleries/{{ $gallery->id }}/images/{{ $image->id }}/edit" data-id="{{ $image->id }}">
-      <td>
-        <img src="{{ $image->src }}" />
-      </td>
-      <td>{{ $image->title }}</td>
-      <td>{{ $image->location }}</td>
-    </tr>
-    @endforeach
-    </tbody>
-  </table>
-  <br />
-  <a href="/dashboard/galleries/{{ $gallery->id }}/images/create" class="btn btn-primary">New Image</a>
 @stop
 
 @section('scripts')

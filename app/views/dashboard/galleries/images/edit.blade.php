@@ -7,8 +7,8 @@
     <div class="form-group">
       <img src="{{ $image->src }}" />
       <br/>
-      {{ Form::label('delete_photo', 'Delete Photo') }}
-      {{ Form::checkbox('delete_photo') }}
+      {{-- {{ Form::label('delete_photo', 'Delete Photo') }} --}}
+      {{-- {{ Form::checkbox('delete_photo') }} --}}
     </div>
     @else
     <div class="form-group">

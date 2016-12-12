@@ -1,0 +1,75 @@
+@import 'bootstrap';
+
+@import 'dashboard/login';
+
+html {
+  font-family: 'ff-tisa-web-pro';
+}
+
+.navbar-default {
+  background-color: #e5e5e5;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+.btn {
+  font-size: 20px;
+  margin: 20px;
+}
+
+tbody tr:hover {
+  cursor: pointer;
+}
+
+#images tr td {
+  border-top: 0;
+}
+
+#images tr {
+  float: left;
+
+  &:hover {
+    > .cover {
+      display: block;
+    }
+
+    img {
+      opacity: 0.3;
+    }
+  }
+}
+
+.cover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: black;
+    font-size: 18px;
+  }
+}
+
+td img {
+  height: 200px;
+}
+
+.sortable-galleries {
+  height: 22px;
+  background-color: #e1e1e1;
+}
+
+.sortable-images {
+  height: 200px;
+  background-color: #e1e1e1;
+}

@@ -1,0 +1,20 @@
+#portrait {
+  max-width: 50vh;
+  margin-bottom: 20px;
+}
+
+.background {
+  margin: 0 0 50px 0;
+}
+
+.icons {
+  .btn {
+    margin-left: 0;
+  }
+
+  img {
+    display: inline-block;
+    max-width: 40px;
+    margin: 0 20px 0 0;
+  }
+}
