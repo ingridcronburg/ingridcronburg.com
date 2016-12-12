@@ -48,7 +48,7 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => array_get($_ENV, 'database.hostname'    ),
+			'host'      => array_get($_ENV, 'database.hostname'),
 			'database'  => array_get($_ENV, 'database.database'),
 			'username'  => array_get($_ENV, 'database.username'),
 			'password'  => array_get($_ENV, 'database.password'),
