@@ -11,7 +11,7 @@ class ContactController extends \BaseController {
     \Mail::send('emails.contact', compact('text'), function($message) use($email, $name)
     {
       $message->to('ingrid@ingridcronburg.com', 'Ingrid Cronburg')
-              ->from($email, $name)
+              ->replyTo($email, $name)
               ->subject('Contact Form');
     });
 
