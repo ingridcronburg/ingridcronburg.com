@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh deploy@ingridcronburg.com "cd /var/www/ingridcronburg.com/www && git pull"
