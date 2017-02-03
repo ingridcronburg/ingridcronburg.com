@@ -7,10 +7,10 @@
   </div>
   <div class="row">
     <div class="col-sm-6">
-      <img src="/assets/img/cms-1.png" class="screenshot"></img>
+      <img class="screenshot" src="/assets/img/cms-1.png" data-toggle="modal" data-target="#image" />
     </div>
     <div class="col-sm-6">
-      <img src="/assets/img/cms-2.png" class="screenshot"></img>
+      <img class="screenshot" src="/assets/img/cms-2.png" data-toggle="modal" data-target="#image" />
     </div>
   </div>
   <div class="row text-center">
@@ -34,19 +34,19 @@
   <div class="row">
     <div class="col-sm-4">
       <figure>
-        <img src="/assets/img/original.jpg" class="screenshot"></img>
+        <img class="screenshot" src="/assets/img/original.jpg" data-toggle="modal" data-target="#image" />
         <figcaption>Self-Portrait, 2015</figcaption>
       </figure>
     </div>
     <div class="col-sm-4">
       <figure>
-        <img src="/assets/img/1000.png" class="screenshot"></img>
+        <img class="screenshot" src="/assets/img/1000.png" data-toggle="modal" data-target="#image" />
         <figcaption>Mosaic with 1,000 tiles</figcaption>
       </figure>
     </div>
     <div class="col-sm-4">
       <figure>
-        <img src="/assets/img/10000.png" class="screenshot"></img>
+        <img class="screenshot" src="/assets/img/10000.png" data-toggle="modal" data-target="#image" />
         <figcaption>Mosaic with 10,000 tiles</figcaption>
       </figure>
     </div>
@@ -70,10 +70,10 @@
   </div>
   <div class="row">
     <div class="col-sm-6">
-      <img src="/assets/img/resourcedot-1.png" class="screenshot"></img>
+      <img class="screenshot" src="/assets/img/resourcedot-1.png" data-toggle="modal" data-target="#image" />
     </div>
     <div class="col-sm-6">
-      <img src="/assets/img/resourcedot-2.png" class="screenshot"></img>
+      <img class="screenshot" src="/assets/img/resourcedot-2.png" data-toggle="modal" data-target="#image" />
     </div>
   </div>
   <div class="row text-center">
@@ -97,10 +97,10 @@
   </div>
   <div class="row">
     <div class="col-sm-6">
-        <img src="/assets/img/employee-1.png" class="screenshot"></img>
+        <img class="screenshot" src="/assets/img/employee-1.png" data-toggle="modal" data-target="#image" />
     </div>
     <div class="col-sm-6">
-      <img src="/assets/img/employee-2.png" class="screenshot"></img>
+      <img class="screenshot" src="/assets/img/employee-2.png" data-toggle="modal" data-target="#image" />
     </div>
   </div>
   <div class="row text-center">
@@ -124,10 +124,10 @@
   </div>
   <div class="row">
     <div class="col-sm-6">
-      <img src="/assets/img/flightpath-1.png" class="screenshot"></img>
+      <img class="screenshot" src="/assets/img/flightpath-1.png" data-toggle="modal" data-target="#image" />
     </div>
     <div class="col-sm-6">
-      <img src="/assets/img/flightpath-2.png" class="screenshot"></img>
+      <img class="screenshot" src="/assets/img/flightpath-2.png" data-toggle="modal" data-target="#image" />
     </div>
   </div>
   <div class="row text-center">
@@ -144,4 +144,29 @@
     <a href="https://github.com/ingridcronburg/flight-path" target="_blank" class="btn btn-primary">View on GitHub</a>
   </div>
 </div>
+<div class="modal fade" id="image" tabindex="-1" role="dialog" aria-labelledby="label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
+  </div>
+</div>
 @endsection
+@section('scripts')
+  @parent
+  <script>
+    $('#image')
+    .on('show.bs.modal', function (event) {
+      var isRect = $(event.relatedTarget).width() > $(event.relatedTarget).height();
+      var $image = $(event.relatedTarget).clone(true)
+                                         .removeClass('screenshot')
+                                         .removeAttr('data-toggle')
+                                         .removeAttr('data-target');
+
+      $('.modal-content', this).html($image);
+      $('.modal-dialog', this).addClass(isRect ? 'landscape' : 'portrait')
+                              .removeClass(isRect ? 'portrait' : 'landscape');
+    })
+    .on('click', function() {
+      $(this).modal('toggle');
+    });
+  </script>
+@stop
