@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Ingrid Cronburg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://use.typekit.net/mjh8jod.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link rel="stylesheet" type="text/css" href="/assets/css/build/app.css">
