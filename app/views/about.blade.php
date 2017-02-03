@@ -74,7 +74,7 @@
       $.post('/api/contact', form.serialize())
       .then(function() {
         form.find('.message').text('Success!');
-        $('#contact').model('toggle');
+        $('#contact').modal('toggle');
       })
       .fail(function() {
         form.find('.message').text('FUCKKKKKK!');
