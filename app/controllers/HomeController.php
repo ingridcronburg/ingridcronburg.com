@@ -7,7 +7,7 @@ class HomeController extends BaseController {
 		return \View::make('home');
 	}
 
-	public function web()
+	public function development()
 	{
 		return \View::make('web');
 	}
