@@ -1,9 +1,9 @@
 <?php
 
 Route::get('/',             'HomeController@index');
-Route::get('/web',          'HomeController@web');
-Route::get('/about',        'HomeController@about');
-Route::post('/api/contact', 'Api\ContactController@index');
+Route::get('development',  'HomeController@development');
+Route::get('about',        'HomeController@about');
+Route::post('api/contact', 'Api\ContactController@index');
 
 Route::resource('galleries', 'GalleriesController');
 

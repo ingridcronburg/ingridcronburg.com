@@ -1,10 +1,10 @@
 @import 'bootstrap';
-@import 'util';
 
+@import 'util';
 @import 'partials/header';
 
-@import 'pages/home';
-@import 'pages/web';
-@import 'pages/gallery-index';
-@import 'pages/gallery';
-@import 'pages/about';
+.page-home      { @import 'pages/home'; }
+.page-galleries { @import 'pages/galleries'; }
+.page-gallery   { @import 'pages/gallery'; }
+.page-web       { @import 'pages/web'; }
+.page-about     { @import 'pages/about'; }

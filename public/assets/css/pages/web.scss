@@ -1,24 +1,44 @@
+
+hr {
+  margin: 50px 0 !important;
+}
+
 .project {
-  padding-bottom: 50px;
-  margin: 50px 0 0 0;
-}
-
-.screenshot {
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.description {
-  font-size: 20px;
-  margin: 50px 50px;
-
-  @media (min-width: $screen-md-min) {
-    margin: 50px 200px;
+  &.last {
+    margin-bottom: 50px;
   }
-}
 
-figure {
-  text-align: center;
+  .row {
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  figure {
+    cursor: pointer;
+
+    figcaption {
+      text-align: center;
+    }
+  }
+
+  .col-sm-6:first-child figure {
+    @media (max-width: $screen-sm-min) {
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 20px;
+
+    @media (min-width: $screen-md-min) {
+      margin: 0 200px;
+    }
+  }
+
 }
 
 .modal-backdrop {
