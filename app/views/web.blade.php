@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 mb15-sm">
         <figure>
           <img src="/assets/img/cms-1.png" data-toggle="modal" data-target="#image" />
         </figure>
@@ -44,13 +44,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-4 mb15-sm">
         <figure>
           <img src="/assets/img/original.jpg" data-toggle="modal" data-target="#image" />
           <figcaption>Self-Portrait, 2015</figcaption>
         </figure>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 mb15-sm">
         <figure>
           <img src="/assets/img/1000.png" data-toggle="modal" data-target="#image" />
           <figcaption>Mosaic with 1,000 tiles</figcaption>
@@ -86,7 +86,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 mb15-sm">
         <figure>
           <img src="/assets/img/resourcedot-1.png" data-toggle="modal" data-target="#image" />
         </figure>
@@ -122,7 +122,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 mb15-sm">
         <figure>
           <img src="/assets/img/employee-1.png" data-toggle="modal" data-target="#image" />
         </figure>
@@ -158,7 +158,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 mb15-sm">
         <figure>
           <img src="/assets/img/flightpath-1.png" data-toggle="modal" data-target="#image" />
         </figure>

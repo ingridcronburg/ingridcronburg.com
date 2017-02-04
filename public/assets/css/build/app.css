@@ -6352,7 +6352,7 @@ p {
   .page-web .project figure figcaption {
     text-align: center; }
 @media (max-width: 768px) {
-  .page-web .project .col-sm-6:first-child figure {
+  .page-web .project .mb15-sm {
     margin-bottom: 15px; } }
 .page-web .project p {
   margin-bottom: 15px;
