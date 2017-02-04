@@ -6277,6 +6277,8 @@ p {
   border: none; }
 .header .navbar {
   margin-bottom: 0; }
+.header .navbar-toggle {
+  margin-right: 0; }
 @media (min-width: 768px) {
   .header .menu.collapse {
     display: block; } }

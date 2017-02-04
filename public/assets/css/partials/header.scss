@@ -10,6 +10,10 @@
     margin-bottom: 0;
   }
 
+  .navbar-toggle {
+    margin-right: 0;
+  }
+
   .menu {
     @media (min-width: $screen-sm-min) {
       &.collapse {
