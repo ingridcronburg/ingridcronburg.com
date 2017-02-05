@@ -5664,8 +5664,8 @@ a, a:hover {
   text-decoration: none; }
 
 p {
-  font-family: 'minion-pro';
-  font-size: 18px;
+  font-family: 'ff-tisa-web-pro';
+  font-size: 16px;
   letter-spacing: 0.7px;
   line-height: 22px; }
 
@@ -6301,7 +6301,8 @@ p {
     letter-spacing: 1px; }
 
 .page-galleries .gallery {
-  position: relative; }
+  position: relative;
+  margin-bottom: 30px; }
   .page-galleries .gallery img {
     width: 50%; }
     .page-galleries .gallery img:hover {
@@ -6322,41 +6323,38 @@ p {
   background-image: none;
   width: 50%; }
 .page-gallery .thumbnails {
-  margin-top: 20px; }
-  .page-gallery .thumbnails:hover img {
-    opacity: 1;
-    transition: 1s opacity; }
+  margin-bottom: 20px;
+  opacity: 0.2; }
+  .page-gallery .thumbnails:hover {
+    opacity: 1; }
   .page-gallery .thumbnails img {
-    max-height: 50px;
     width: auto;
-    margin: 5px;
-    opacity: 0.1;
-    transition: 1s opacity; }
-    .page-gallery .thumbnails img:hover {
-      opacity: 0.5;
-      transition: 0.2s opacity; }
-    .page-gallery .thumbnails img.selected {
-      opacity: 0.5;
-      transition: 1s opacity; }
+    max-height: 50px;
+    margin: 0 5px;
+    opacity: 0.2; }
+    .page-gallery .thumbnails img:hover, .page-gallery .thumbnails img.selected {
+      opacity: 1; }
 
 .page-web hr {
   margin: 50px 0 !important; }
 .page-web .project.last {
   margin-bottom: 50px; }
 .page-web .project .row {
-  margin-bottom: 15px; }
+  margin-bottom: 30px; }
 .page-web .project h1 {
   text-align: center; }
 .page-web .project figure {
   cursor: pointer; }
   .page-web .project figure figcaption {
-    text-align: center; }
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: 'ff-tisa-web-pro'; }
 @media (max-width: 768px) {
   .page-web .project .mb15-sm {
     margin-bottom: 15px; } }
 .page-web .project p {
-  margin-bottom: 15px;
-  font-size: 20px; }
+  margin-bottom: 15px; }
   @media (min-width: 992px) {
     .page-web .project p {
       margin: 0 200px; } }

@@ -1,6 +1,4 @@
 .header {
-  $fontsize: 14px;
-
   nav {
     background-color: #fff;
     border: none;
@@ -31,8 +29,8 @@
     padding-left: 0;
 
     a {
-      font-size: $fontsize;
-      line-height: $fontsize;
+      font-size: $font-size-base;
+      line-height: $font-size-base;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -42,8 +40,8 @@
     margin-right: 0;
 
     a {
-      font-size: $fontsize;
-      line-height: $fontsize;
+      font-size: $font-size-base;
+      line-height: $font-size-base;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
