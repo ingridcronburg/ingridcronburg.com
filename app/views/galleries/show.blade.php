@@ -21,12 +21,12 @@
       </div>
     @endforeach
     </div>
-    <a class="left carousel-control" href="#carousel-previous" role="button" data-slide="prev">
+    <div class="left carousel-control" role="button" data-slide="prev">
       <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-next" role="button" data-slide="next">
+    </div>
+    <div class="right carousel-control" role="button" data-slide="next">
       <span class="sr-only">Next</span>
-    </a>
+    </div>
   </div>
 </div>
 @endsection
@@ -76,7 +76,13 @@
   });
 
   $('.carousel').on('slide.bs.carousel', function(event) {
-    setThumbnailState($(event.relatedTarget).data('index'));
+    var index = $(event.relatedTarget).data('index')
+    setThumbnailState(index);
+    window.location.hash = index + 1;
   });
+
+  if (window.location.hash) {
+    $('.carousel').carousel(parseInt(window.location.hash.slice(1)) - 1);
+  }
 </script>
 @endsection
