@@ -109,7 +109,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12 text-center">
-        <a href="http://www.resource.cool" target="_blank" class="btn btn-primary mr20">Demo</a>
+        <a href="http://resource.ingridcronburg.com" target="_blank" class="btn btn-primary mr20">Demo</a>
         <a href="https://github.com/ingridcronburg/resource-dot" target="_blank" class="btn btn-primary">GitHub</a>
       </div>
     </div>
