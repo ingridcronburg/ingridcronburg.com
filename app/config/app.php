@@ -80,7 +80,7 @@ return array(
 
 	'key' => array_get($_ENV, 'key'),
 
-	'cipher' => MCRYPT_RIJNDAEL_128,
+	'cipher' => 'AES-256-CBC',
 
 	/*
 	|--------------------------------------------------------------------------
